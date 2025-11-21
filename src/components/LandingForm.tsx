@@ -1,6 +1,5 @@
 import React, { useState, type FormEvent, type ChangeEvent } from 'react';
 import styles from '../pages/LandingPage.module.css';
-
 interface FormData {
     parentName: string;
     email: string;
@@ -40,7 +39,7 @@ const LandingForm: React.FC = () => {
         setStatus('submitting');
 
         try {
-            await fetch(GOOGLE_SCRIPT_URL, {
+            await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
