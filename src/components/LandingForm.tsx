@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, ChangeEvent } from 'react';
+import React, { useState, type FormEvent, type ChangeEvent } from 'react';
 import styles from '../pages/LandingPage.module.css';
 
 interface FormData {
